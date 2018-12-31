@@ -20,18 +20,23 @@
     }
   }
 {
-"Resources":{
-     "IAMGroup":{
+"Resources":
+  {
+     "IAMGroup":
+    {
          "Type": "AWS::IAM::Group",
-         "Properties":{
+         "Properties":
+      {
                  "GroupName": "DataAnalysts" 
-    }
-},
+       }
+     },
      "IamPolicy": {
          "Type" : "AWS::IAM::Policy",
-         "Properties" : { 
+         "Properties" : 
+                      { 
                  "Groups" : [ {"Ref": "IAMGroup"} ],
-                 "PolicyDocument" : {
+                 "PolicyDocument" : 
+        {
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -64,8 +69,8 @@
                 "cloudwatch:GetMetricWidgetImage"
             ],
             "Resource": "*"
-        }
-    ]
+         }
+                   ]
 },
         "PolicyName" : "DataAnalystPolicy"
        }
