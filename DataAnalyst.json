@@ -13,7 +13,6 @@
     },
     "MaxSessionDuration": 43200,
     "Path": "/",
-    "RoleName": makeusers
   }
 }
 {
