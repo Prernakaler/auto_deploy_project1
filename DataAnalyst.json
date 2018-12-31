@@ -11,9 +11,8 @@
                   "Action": [ "sts:AssumeRole" ]
                } ]
     },
-    "ManagedPolicyArns": [arn:aws:iam::348679209771:role/makeusers],
     "MaxSessionDuration": 43200,
-    "Path": DataAnalysts,
+    "Path": "/",
     "RoleName": makeusers
   }
 }
