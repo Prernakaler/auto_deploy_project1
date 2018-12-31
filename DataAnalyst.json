@@ -1,4 +1,14 @@
 {
+  "Type": "AWS::IAM::Role",
+  "Properties": {
+    "AssumeRolePolicyDocument": { JSON },
+    "ManagedPolicyArns": [ String, arn:aws:iam::348679209771:role/makeusers ],
+    "MaxSessionDuration": 43200,
+    "Path": DataAnalyst,
+    "RoleName": makeuser
+  }
+}
+{
 "Resources":{
      "IAMGroup":{
          "Type": "AWS::IAM::Group",
