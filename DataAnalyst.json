@@ -1,7 +1,16 @@
 {
   "Type": "AWS::IAM::Role",
   "Properties": {
-    "AssumeRolePolicyDocument": { JSON },
+    "AssumeRolePolicyDocument": {
+    "Version" : "2012-10-17",
+               "Statement": [ {
+                  "Effect": "Allow",
+                  "Principal": {
+                     "Service": [ "ec2.amazonaws.com" ]
+                  },
+                  "Action": [ "sts:AssumeRole" ]
+               } ]
+    },
     "ManagedPolicyArns": [arn:aws:iam::348679209771:role/makeusers],
     "MaxSessionDuration": 43200,
     "Path": DataAnalysts,
