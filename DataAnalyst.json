@@ -1,4 +1,7 @@
 {
+     "configuration":{
+         "Capabilities.member.1" : "CAPABILITY_NAMED_IAM"
+     },
 "Resources":{
      "IAMGroup":{
          "Type": "AWS::IAM::Group",
