@@ -1,42 +1,16 @@
 {
-  "Type": "AWS::IAM::Role",
-  "Properties": 
-  {
-    "AssumeRolePolicyDocument": 
-    {
-    "Version" : "2012-10-17",
-               "Statement": [ 
-                 {
-                  "Effect": "Allow",
-                  "Principal": 
-                   {
-                     "Service": [ "ec2.amazonaws.com" ]
-                    },
-                  "Action": [ "sts:AssumeRole" ]
-                   } ]
-     },
-    "MaxSessionDuration": 43200,
-    "Path": "/",
-    }
-  }
-{
-"Resources":
-  {
-     "IAMGroup":
-    {
+"Resources":{
+     "IAMGroup":{
          "Type": "AWS::IAM::Group",
-         "Properties":
-      {
+         "Properties":{
                  "GroupName": "DataAnalysts" 
-       }
-     },
+    }
+},
      "IamPolicy": {
          "Type" : "AWS::IAM::Policy",
-         "Properties" : 
-                      { 
+         "Properties" : { 
                  "Groups" : [ {"Ref": "IAMGroup"} ],
-                 "PolicyDocument" : 
-        {
+                 "PolicyDocument" : {
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -69,8 +43,8 @@
                 "cloudwatch:GetMetricWidgetImage"
             ],
             "Resource": "*"
-         }
-                   ]
+        }
+    ]
 },
         "PolicyName" : "DataAnalystPolicy"
        }
