@@ -1,4 +1,4 @@
-
+{
 "Resources":{
      "IAMGroup":{
          "Type": "AWS::IAM::Group",
