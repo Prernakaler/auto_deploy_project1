@@ -2,8 +2,7 @@
 "Resources":{
      "DataAnalyst":{
          "Type": "AWS::IAM::Group"
-        }
-},
+        },
      "Policyreadonly": {
          "Type" : "AWS::IAM::Policy",
          "Properties" : { 
@@ -46,5 +45,6 @@
 }
          }
      }
+    }
    }
 
