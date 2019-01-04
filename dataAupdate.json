@@ -3,8 +3,8 @@
      "DataAnalyst":{
          "Type": "AWS::IAM::Group",
          "Properties":{
-              "GroupName": "KBGroup"           
-           }
+              "GroupName":  {"Fn::Join": ["", [{"Ref": "AWS::Region"}, {"Ref": "MyResourceName"}]]}         
+         }
         },
      "Policyreadonly": {
          "Type" : "AWS::IAM::Policy",
