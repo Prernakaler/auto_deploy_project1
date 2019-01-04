@@ -5,7 +5,7 @@
          "Properties":{
       }
 },
-     "IamPolicy": {
+     "Policyreadonly": {
          "Type" : "AWS::IAM::Policy",
          "Properties" : { 
                  "Groups" : [ {"Ref": "DataAnalyst"} ],
@@ -44,9 +44,8 @@
             "Resource": "*"
         }
     ]
-},
-        "PolicyName" : "DataAnalystPolicy"
-       }
+}
+         }
      }
    }
 }
