@@ -1,11 +1,8 @@
 {
 "Resources":{
      "DataAnalyst":{
-         "Type": "AWS::IAM::Group",
-         "Properties":{
-              "GroupName":  {"Fn::Join": ["", [{"Ref": "AWS::Region"}, {"Ref": "DataAnalyst"}]]}         
-         }
-        },
+         "Type": "AWS::IAM::Group"
+                 },
      "Policyreadonly": {
          "Type" : "AWS::IAM::Policy",
          "Properties" : { 
