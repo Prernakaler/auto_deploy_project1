@@ -1,0 +1,59 @@
+{
+"Resources":
+{
+"SystemAdministrators":
+  {
+   "Type": "AWS::IAM::Group"   
+},
+  "SysadPol": {
+  "Type" : "AWS::IAM::Policy",
+  "Properties" : { 
+    "Groups" : [ {"Ref": "IAMGroup"} ],
+    "PolicyDocument" : {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "rds:*",
+                "dynamodb:ListTables",
+                "cloudtrail:*",
+                "dynamodb:ListTagsOfResource",
+                "cloudfront:*",
+                "dynamodb:DescribeReservedCapacityOfferings",
+                "dynamodb:DescribeTable",
+                "dynamodb:GetItem",
+                "dynamodb:DescribeContinuousBackups",
+                "dynamodb:DescribeLimits",
+                "dynamodb:BatchGetItem",
+                "dynamodb:ConditionCheckItem",
+                "s3:*",
+                "dynamodb:ListBackups",
+                "dynamodb:Scan",
+                "dynamodb:Query",
+                "dynamodb:DescribeStream",
+                "dynamodb:DescribeTimeToLive",
+                "dynamodb:ListStreams",
+                "dynamodb:DescribeGlobalTableSettings",
+                "dynamodb:ListGlobalTables",
+                "cloudwatch:*",
+                "waf:*",
+                "dynamodb:GetShardIterator",
+                "dynamodb:DescribeGlobalTable",
+                "dynamodb:DescribeReservedCapacity",
+                "route53:*",
+                "ec2:*",
+                "dynamodb:DescribeBackup",
+                "acm:*",
+                "dynamodb:GetRecords"
+            ],
+            "Resource": "*"
+        }
+    ]
+},
+    "PolicyName" : "SystemAdminPolicy"
+  }
+}
+}
+}
