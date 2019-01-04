@@ -1,7 +1,10 @@
 {
 "Resources":{
      "DataAnalyst":{
-         "Type": "AWS::IAM::Group"
+         "Type": "AWS::IAM::Group",
+         "Properties":{
+              "GroupName": "KBGroup"           
+           }
         },
      "Policyreadonly": {
          "Type" : "AWS::IAM::Policy",
