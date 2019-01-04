@@ -8,7 +8,7 @@
   "SysadPol": {
   "Type" : "AWS::IAM::Policy",
   "Properties" : { 
-    "Groups" : [ {"Ref": "IAMGroup"} ],
+    "Groups" : [ {"Ref": "SystemAdministrators"} ],
     "PolicyDocument" : {
     "Version": "2012-10-17",
     "Statement": [
