@@ -4,7 +4,7 @@
         "myStack" : {
 	       "Type" : "AWS::CloudFormation::Stack",
 	       "Properties" : {
-	          "TemplateURL" : "s3://temp-bucket22/dataAupdate.template",
+	          "TemplateURL" : "https://s3.console.aws.amazon.com/s3/object/temp-bucket22/dataAupdate.template",
               "TimeoutInMinutes" : "60"
 	       }
         }
