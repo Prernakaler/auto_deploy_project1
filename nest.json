@@ -4,7 +4,7 @@
         "myStack" : {
 	       "Type" : "AWS::CloudFormation::Stack",
 	       "Properties" : {
-	          "TemplateURL" : "https://github.com/Prernakaler/auto_deploy_project1/blob/master/dataAupdate.json",
+	          "TemplateURL" : "s3://temp-bucket22/dataAupdate.template.txt",
               "TimeoutInMinutes" : "60"
 	       }
         }
