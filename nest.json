@@ -5,6 +5,6 @@
 	       "Properties" : {
 	          "TemplateURL" : "https://s3.console.aws.amazon.com/s3/object/temp-bucket22/dataAupdate.template",
 	       }
-        }
+	}
     }
 }
