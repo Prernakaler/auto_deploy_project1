@@ -3,7 +3,7 @@
         "AStack" : {
 	       "Type" : "AWS::CloudFormation::Stack",
 	       "Properties" : {
-	          "TemplateURL" : "https://s3.console.aws.amazon.com/s3/object/temp-bucket22/dataAupdate.template",
+	          "TemplateURL" : "https://s3.console.aws.amazon.com/s3/object/temp-bucket22/dataAupdate.template"
 	       }
 	}
     }
