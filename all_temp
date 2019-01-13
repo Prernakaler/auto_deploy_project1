@@ -5,6 +5,9 @@
   {
    "Type": "AWS::IAM::Group"   
 },
+"DataAnalyst":{
+         "Type": "AWS::IAM::Group"
+                 },
   "SysadPol": {
   "Type" : "AWS::IAM::Policy",
   "Properties" : { 
@@ -54,6 +57,54 @@
 },
     "PolicyName" : "SystemAdminPolicy"
   }
+  
+  
+  
+  "Policyreadonly": {
+         "Type" : "AWS::IAM::Policy",
+         "Properties" : { 
+                 "Groups" : [ {"Ref": "DataAnalyst"} ],
+                 "PolicyDocument" : {
+    "Version" : "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "cloudtrail:LookupEvents",
+                "cloudwatch:GetDashboard",
+                "s3:*",
+                "cloudwatch:GetMetricData",
+                "cloudtrail:GetTrailStatus",
+                "cloudtrail:GetEventSelectors",
+                "cloudwatch:GetMetricStatistics",
+                "cloudwatch:ListMetrics",
+                "acm:ListTagsForCertificate",
+                "glue:*",
+                "cloudtrail:DescribeTrails",
+                "cloudwatch:DescribeAlarmHistory",
+                "acm:DescribeCertificate",
+                "acm:GetCertificate",
+                "cloudtrail:ListPublicKeys",
+                "cloudwatch:DescribeAlarmsForMetric",
+                "cloudtrail:ListTags",
+                "cloudwatch:ListDashboards",
+                "cloudwatch:DescribeAlarms",
+                "acm:ListCertificates",
+                "ec2:*",
+                "kinesis:*",
+                "elasticmapreduce:*",
+                "cloudwatch:GetMetricWidgetImage"
+            ],
+            "Resource": "*"
+        }
+    ]
+},
+  "PolicyName": "Anonypol"
+  
+   }
 }
 }
 }
+
+     
