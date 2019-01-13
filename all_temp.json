@@ -107,7 +107,7 @@
       "Type" : "AWS::S3::Bucket",
       "Properties" : {
         "AccessControl" : "PublicRead"
-      }
+      
     }
   },
 
@@ -117,7 +117,7 @@
       "Description" : "Name of S3 bucket to hold website content"
     }
   }
-}
+
 
 }
 }
